@@ -1,0 +1,10 @@
+<h1><%= @meetup.name %></h1>
+
+<ul>
+  <li>Description: <%= @meetup.description %></li>
+  <li>Location: <%= @meetup.location %></li>
+  <li>Creator: <%= @meetup.creator %></li>
+</ul>
+<% @attendees.each do |attendee| %>
+  <h2><img src="<%= attendee.avatar_url %>" style="width:40px;height:40px;"> <%= attendee.username %></h2>
+<% end %>
